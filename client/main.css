@@ -1,0 +1,7 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  background-color: rgba(215, 212, 212, 0.88) !important;
+}

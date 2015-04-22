@@ -1,0 +1,152 @@
+<template name="intake">
+  <div class="container" id="cnt1">
+      <div class="col-md-3">
+      </div>
+
+      <div class="col-md-6" id="panel1">
+          <div class="panel panel-default">
+              <div class="panel-heading">
+                  <h3 class="panel-title">
+                      <span class="fa fa-question-circle"></span>   Intake Questions</h3>
+              </div>
+              <div class="panel-body two-col">
+                  <div class="row">
+                      <p class="col-md-12">
+                        <span class="fa fa-long-arrow-right"></span> Consider the following statements and select all that apply.
+                      </p>
+                      <div class="col-md-6">
+                          <div class="well well-sm">
+                              <div class="checkbox">
+                                  <label>
+                                      <input type="checkbox" value="">
+                                      I can read program code written in the Java programming language.
+                                  </label>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-md-6">
+                          <div class="well well-sm">
+                              <div class="checkbox">
+                                  <label>
+                                      <input type="checkbox" value="">
+                                      I can write program code in the Java programming language.
+                                  </label>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="row">
+                      <div class="col-md-6">
+                          <div class="well well-sm margin-bottom-none">
+                              <div class="checkbox">
+                                  <label>
+                                      <input type="checkbox" value="">
+                                      I have experience with other languages than Java.
+                                  </label>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-md-6">
+                          <div class="well well-sm margin-bottom-none">
+                              <div class="checkbox">
+                                  <label>
+                                      <input type="checkbox" value="">
+                                      I use Java as the main programming language.
+                                  </label>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <hr />
+                  <div class="row">
+                      {{> _questionTitle question='How many years of programming experience do you have?'}}
+                      <div class="col-md-12">
+                          <div class="well well-sm">
+                              <div class="checkbox">
+                                  <div class="radio">
+                                    <label>
+                                      <input type="radio" name="experience" id="experience0" value="0">
+                                      Zero years.
+                                    </label>
+                                  </div>
+                                  <div class="radio">
+                                    <label>
+                                      <input type="radio" name="experience" id="experience12" value="12">
+                                      1 - 2 years.
+                                    </label>
+                                  </div>
+                                  <div class="radio">
+                                    <label>
+                                      <input type="radio" name="experience" id="experience25" value="25">
+                                      2 - 5 years.
+                                    </label>
+                                  </div>
+                                  <div class="radio">
+                                    <label>
+                                      <input type="radio" name="experience" id="experience510" value="510">
+                                      5 - 10 years.
+                                    </label>
+                                  </div>
+                                  <div class="radio">
+                                    <label>
+                                      <input type="radio" name="experience" id="experience10m" value="10+">
+                                      More than 10 years.
+                                    </label>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="row">
+                      {{> _questionTitle question='I\'m currently employed as a ...'}}
+                      <div class="col-md-12">
+                          <div class="well well-sm">
+                              <div class="checkbox">
+                                  <div class="radio">
+                                    <label>
+                                      <input type="radio" name="experience" id="experience0" value="0">
+                                      Software Programmer
+                                    </label>
+                                  </div>
+                                  <div class="radio">
+                                    <label>
+                                      <input type="radio" name="experience" id="experience12" value="12">
+                                      Software Engineer
+                                    </label>
+                                  </div>
+                                  <div class="radio">
+                                    <label>
+                                      <input type="radio" name="experience" id="experience25" value="25">
+                                      Software Architect
+                                    </label>
+                                  </div>
+                                  <div class="radio">
+                                    <label>
+                                      <input type="radio" name="experience" id="experience510" value="510">
+                                      Functional Designer
+                                    </label>
+                                  </div>
+                                  <div class="radio">
+                                    <label>
+                                      <input type="radio" name="experience" id="experience10m" value="10+">
+                                      Frontend Developer
+                                    </label>
+                                  </div>
+                                  <div class="radio">
+                                    <label>
+                                      <input type="radio" name="experience" id="experience10m" value="10+">
+                                      Project Manager
+                                    </label>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+
+              </div>
+              {{> _panelFooter}}
+          </div>
+      </div>
+  </div>
+</template>
