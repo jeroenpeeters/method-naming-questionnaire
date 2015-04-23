@@ -11,3 +11,4 @@ coffeescript
 iron:router
 twbs:bootstrap
 fortawesome:fontawesome
+u2622:persistent-session
