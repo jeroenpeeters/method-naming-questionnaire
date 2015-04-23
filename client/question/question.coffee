@@ -7,6 +7,9 @@ Template.question.onRendered ->
 
 Template.question.events
   'click #backButton': -> Router.go 'intake'
-  'click #nextButton': -> #Router.go 'intake'
+  'click #nextButton': (e, tpl)->
+    if tpl.$('#methodName').val() == '' and !tpl.$('#cannotBeNamed:checked').val()
+      alert 'no name or check'
+    #Router.go 'intake'
   'change #cannotBeNamed': (e, tpl)->
     tpl.$('#methodName').prop 'disabled', e.currentTarget.checked
