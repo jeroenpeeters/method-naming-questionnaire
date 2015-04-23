@@ -4,7 +4,7 @@
 
 #panel1 {
     padding:20px;
-}
+} 
 
 .panel-body:not(.two-col) {
     padding: 0px;
@@ -21,4 +21,13 @@
 
 .margin-bottom-none {
     margin-bottom: 0;
+}
+
+#editor {
+  width:100%;
+  margin-top:20px;
+  min-height:20em;
+  border:1px solid grey;
+  border-radius: 3px;
+  font-size:16px;
 }
