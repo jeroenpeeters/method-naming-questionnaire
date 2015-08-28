@@ -62,38 +62,14 @@
                       {{> _questionTitle question='How many years of programming experience do you have?'}}
                       <div class="col-md-12">
                           <div class="well well-sm">
-                              <div class="checkbox">
-                                  <div class="radio">
-                                    <label>
-                                      <input type="radio" name="experience" id="experience0" value="0">
-                                      Zero years.
-                                    </label>
-                                  </div>
-                                  <div class="radio">
-                                    <label>
-                                      <input type="radio" name="experience" id="experience12" value="12">
-                                      1 - 2 years.
-                                    </label>
-                                  </div>
-                                  <div class="radio">
-                                    <label>
-                                      <input type="radio" name="experience" id="experience25" value="25">
-                                      2 - 5 years.
-                                    </label>
-                                  </div>
-                                  <div class="radio">
-                                    <label>
-                                      <input type="radio" name="experience" id="experience510" value="510">
-                                      5 - 10 years.
-                                    </label>
-                                  </div>
-                                  <div class="radio">
-                                    <label>
-                                      <input type="radio" name="experience" id="experience10m" value="10+">
-                                      More than 10 years.
-                                    </label>
-                                  </div>
-                              </div>
+                              <select id="experience" class="form-control registerAnswer" >
+                                <option value=""></option>
+                                <option value="0" {{selected answers.experience "0"}}>None.</option>
+                                <option value="12" {{selected answers.experience "12"}}>1 - 2 years.</option>
+                                <option value="25" {{selected answers.experience "25"}}>2 - 5 years.</option>
+                                <option value="510" {{selected answers.experience "510"}}>5 - 10 years.</option>
+                                <option value="10" {{selected answers.experience "10"}}>More than 10 years.</option>
+                              </select>
                           </div>
                       </div>
                   </div>
@@ -102,44 +78,20 @@
                       {{> _questionTitle question='I\'m currently employed as a ...'}}
                       <div class="col-md-12">
                           <div class="well well-sm">
-                              <div class="checkbox">
-                                  <div class="radio">
-                                    <label>
-                                      <input type="radio" name="experience" id="experience0" value="0">
-                                      Software Programmer
-                                    </label>
-                                  </div>
-                                  <div class="radio">
-                                    <label>
-                                      <input type="radio" name="experience" id="experience12" value="12">
-                                      Software Engineer
-                                    </label>
-                                  </div>
-                                  <div class="radio">
-                                    <label>
-                                      <input type="radio" name="experience" id="experience25" value="25">
-                                      Software Architect
-                                    </label>
-                                  </div>
-                                  <div class="radio">
-                                    <label>
-                                      <input type="radio" name="experience" id="experience510" value="510">
-                                      Functional Designer
-                                    </label>
-                                  </div>
-                                  <div class="radio">
-                                    <label>
-                                      <input type="radio" name="experience" id="experience10m" value="10+">
-                                      Frontend Developer
-                                    </label>
-                                  </div>
-                                  <div class="radio">
-                                    <label>
-                                      <input type="radio" name="experience" id="experience10m" value="10+">
-                                      Project Manager
-                                    </label>
-                                  </div>
-                              </div>
+                              <select id="employmentTitle" class="form-control registerAnswer">
+                                <option value=""></option>
+                                <option value="programmer" {{selected answers.employmentTitle "programmer"}}>Software Programmer</option>
+                                <option value="engineer" {{selected answers.employmentTitle "engineer"}}>Software Engineer</option>
+                                <option value="architect" {{selected answers.employmentTitle "architect"}}>Software Architect</option>
+                                <option value="frontend" {{selected answers.employmentTitle "frontend"}}>Frontend Developer</option>
+                                <option value="functional" {{selected answers.employmentTitle "functional"}}>Functional Designer</option>
+                                <option value="manager" {{selected answers.employmentTitle "manager"}}>Project Manager</option>
+                                <option value="other" {{selected answers.employmentTitle "other"}}>Other...</option>
+                              </select>
+                              {{#if otherEmployment}}
+                                  <br />
+                                  <input id="otherEmployment" type="input" class="form-control registerAnswer" value="{{answers.otherEmployment}}" placeholder="Please provide function title">
+                              {{/if}}
                           </div>
                       </div>
                   </div>
