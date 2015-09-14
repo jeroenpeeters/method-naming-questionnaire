@@ -3,11 +3,6 @@
       <div class="col-md-1"></div>
       <div class="col-md-7">
         <div id="editor">
-public String nameThisMethod() {
-  copyExtractService.print(getDossierId());
-  generateLetter("copy");
-  return SUCCESS;
-}
         </div>
       </div>
 
@@ -30,19 +25,28 @@ public String nameThisMethod() {
                       <div class="col-md-12" style="margin-top:20px;">
                           <div class="well well-sm" style="text-align:center;">
                             <!--label for="methodName">Method name</label-->
-                            <input type="input" class="form-control" id="methodName" placeholder="Enter method name">
+                            <input type="input" class="registerAnswer form-control" id="methodName" placeholder="Enter method name">
 
                             <p style="margin:10px;">or select</p>
 
                             <label style="font-weight:normal;">
                               <input id="cannotBeNamed" type="checkbox"> This method cannot be named
                             </label>
+                            {{#if cannotBeNamedIsChecked}}
+                            <label for="cannotBeNamedReason" class="control-label">Please explain why you think this method is unnameable.</label>
+                            <textarea id="cannotBeNamedReason" class="registerAnswer form-control" rows="3"></textarea>
+                            {{else}}
+                              {{#if methodNameEntered}}
+                              <label for="methodNameReason" class="registerAnswer control-label">Please explain the reason for choosing <i>{{methodName}}</i>. (Optional)</label>
+                              <textarea id="methodNameReason" class="form-control" rows="3"></textarea>
+                              {{/if}}
+                            {{/if}}
                           </div>
                       </div>
                   </div>
 
               </div>
-              {{> _panelFooter }}
+              {{> _panelFooter noBackButton=true}}
           </div>
       </div>
 

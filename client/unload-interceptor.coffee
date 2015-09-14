@@ -8,4 +8,5 @@
     @interceptUnload = false
 
 Meteor.startup ->
-  UnloadInterceptor.install()
+  unless window?.location?.pathname?.match /admin/
+    ;#UnloadInterceptor.install()

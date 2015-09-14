@@ -8,3 +8,6 @@ Meteor.methods
     console.log 'recv', answers, @userId
 
     User.update @userId, $set: intakeAnswers: answers
+
+  nextQuestion: ->
+    Methods.findOne {}
