@@ -10,7 +10,7 @@ iron:router
 twbs:bootstrap
 fortawesome:fontawesome
 u2622:persistent-session
-houston:admin
+yogiben:admin
 juliancwirko:s-alert
 juliancwirko:s-alert-flip
 simply:reactive-local-storage
