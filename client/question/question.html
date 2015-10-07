@@ -43,6 +43,13 @@
                             {{/if}}
                           </div>
                       </div>
+                      {{#if errorMessage}}
+                      <div class="col-md-12">
+                        <div class="bs-callout bs-callout-warning">
+                          <p>{{{errorMessage}}}</p>
+                        </div>
+                      </div>
+                      {{/if}}
                   </div>
 
               </div>

@@ -6,6 +6,8 @@ validateInput = ->
   answers = Session.get 'answers'
   answers?.employmentTitle == "" or answers?.experience == ""
 
+Template.intake.onCreated AutoLogon
+
 Template.intake.helpers
   otherEmployment: -> Session.get('answers')?.employmentTitle == 'other'
   answers: -> Session.get 'answers'
@@ -18,7 +20,8 @@ Template.intake.events
     else
       Meteor.call 'intakeAnswers', Session.get('answers'), (error) ->
         unless error
-          Router.go 'question'
+            Router.go 'question',
+              token: tpl.data.userToken
         else
           sAlert.error 'An error occured, check your network connectivity.'
 
